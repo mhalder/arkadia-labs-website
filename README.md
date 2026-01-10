@@ -50,6 +50,28 @@ src/
 - Tokyo Night color scheme
 - Custom cube logo
 
+## Deployment
+
+The site automatically deploys to AWS S3 + CloudFront on push to `main`.
+
+### Required GitHub Secrets
+
+| Secret                       | Description                       |
+| ---------------------------- | --------------------------------- |
+| `AWS_ACCESS_KEY_ID`          | AWS IAM access key                |
+| `AWS_SECRET_ACCESS_KEY`      | AWS IAM secret key                |
+| `AWS_REGION`                 | AWS region (e.g., `eu-central-1`) |
+| `S3_BUCKET`                  | S3 bucket name                    |
+| `CLOUDFRONT_DISTRIBUTION_ID` | CloudFront distribution ID        |
+
+### Manual Deployment
+
+```bash
+npm run build
+aws s3 sync dist/ s3://your-bucket --delete
+aws cloudfront create-invalidation --distribution-id YOUR_DIST_ID --paths "/*"
+```
+
 ## Contact
 
 - **Email:** halderm@arkadia-labs.io
