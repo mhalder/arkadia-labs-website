@@ -1,0 +1,116 @@
+# Arkadia Labs Website
+
+Corporate website for Arkadia Labs GmbH - a cloud consulting and DevOps company based in Switzerland.
+
+## Tech Stack
+
+- **Framework:** React 19 + Vite 7
+- **Routing:** React Router DOM
+- **Styling:** Tailwind CSS 4 with CSS-based configuration
+- **Components:** shadcn/ui (Button, Card)
+- **Icons:** Lucide React
+- **Testing:** Playwright (Chromium)
+- **Theme:** Custom Swiss-precision design with electric blue/purple accents (dark/light mode)
+- **Typography:** Syne (display) + Outfit (body) + JetBrains Mono (code)
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint code
+npm run lint
+
+# Run tests
+npm test
+
+# Run tests with UI
+npm run test:ui
+
+# Run tests in headed mode
+npm run test:headed
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── ui/
+│   │   ├── button.jsx     # shadcn Button component
+│   │   └── card.jsx       # shadcn Card component
+│   ├── Header.jsx         # Glass navigation with theme toggle
+│   ├── Footer.jsx         # Contact info and address
+│   ├── Hero.jsx           # Hero section with logo and tagline
+│   └── ServiceCard.jsx    # Service card with icons and features
+├── context/
+│   └── ThemeContext.jsx   # Dark/light theme state (localStorage)
+├── lib/
+│   └── utils.js           # Tailwind merge utility (cn function)
+├── pages/
+│   ├── Home.jsx           # Homepage with hero, services, CTA
+│   ├── ServicesPage.jsx   # Full services listing
+│   ├── ImpressumPage.jsx  # Legal notice (Swiss UCA compliant)
+│   └── PrivacyPage.jsx    # Privacy policy (Swiss FADP compliant)
+├── App.jsx                # Main app with routing
+└── index.css              # Tailwind config and custom utilities
+
+tests/
+├── navigation.spec.js     # Link and navigation tests (21 tests)
+├── content.spec.js        # Page content verification (45 tests)
+└── theme.spec.js          # Light/dark mode tests (18 tests)
+```
+
+## Features
+
+- Responsive design (mobile-first)
+- Dark/light theme toggle (persisted to localStorage)
+- Glass morphism navigation header
+- Animated gradient text
+- Card hover effects with gradient borders
+- Custom animations (fade-up, float, shimmer)
+- Scroll-to-top on route navigation
+- shadcn/ui component primitives
+- Swiss legal compliance (Impressum, Privacy Policy)
+- Comprehensive Playwright test suite (82 tests)
+
+## Deployment
+
+The site automatically deploys to AWS S3 + CloudFront on push to `main` after CI passes.
+
+### CI/CD Pipeline
+
+Single workflow (`.github/workflows/ci.yml`) handles everything:
+
+| Trigger | Jobs |
+|---------|------|
+| Pull Request | lint, test, build |
+| Push to main | lint, test, build, deploy |
+
+The deploy job only runs on `main` after all checks pass.
+
+### Required GitHub Secrets
+
+| Secret                       | Description                       |
+| ---------------------------- | --------------------------------- |
+| `AWS_ACCESS_KEY_ID`          | AWS IAM access key                |
+| `AWS_SECRET_ACCESS_KEY`      | AWS IAM secret key                |
+| `AWS_REGION`                 | AWS region (e.g., `eu-central-1`) |
+| `S3_BUCKET`                  | S3 bucket name                    |
+| `CLOUDFRONT_DISTRIBUTION_ID` | CloudFront distribution ID        |
+
+## Contact
+
+- **Email:** halderm@arkadia-labs.io
+- **Phone:** +41 41 768 11 61
+- **Address:** Blegistrasse 11B, 6341 Baar, Switzerland
