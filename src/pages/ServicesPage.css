@@ -1,6 +1,5 @@
 .services-page {
-  min-height: calc(100vh - 200px);
-  padding: 3rem 2rem;
+  padding: 2rem 2rem 1.5rem;
 }
 
 .services-container {
