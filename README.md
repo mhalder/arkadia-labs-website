@@ -68,8 +68,8 @@ The site automatically deploys to AWS S3 + CloudFront on push to `main`.
 
 ```bash
 npm run build
-aws s3 sync dist/ s3://your-bucket --delete
-aws cloudfront create-invalidation --distribution-id YOUR_DIST_ID --paths "/*"
+aws s3 sync dist/ s3://arkadia-labs-io --delete
+aws cloudfront create-invalidation --distribution-id E2XF4834XDGVMV --paths "/*"
 ```
 
 ## Contact
