@@ -1,16 +1,57 @@
-# React + Vite
+# Arkadia Labs Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Corporate website for Arkadia Labs GmbH - a cloud consulting and DevOps company based in Switzerland.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework:** React 19 + Vite
+- **Routing:** React Router DOM
+- **Styling:** CSS with CSS Variables
+- **Theme:** Tokyo Night color scheme (dark/light mode)
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Install dependencies
+npm install
 
-## Expanding the ESLint configuration
+# Start development server
+npm run dev
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── Header.jsx      # Navigation with logo and theme toggle
+│   ├── Footer.jsx      # Contact info and address
+│   ├── Hero.jsx        # Homepage hero section
+│   └── ServiceCard.jsx # Reusable service card component
+├── context/
+│   └── ThemeContext.jsx # Dark/light theme state
+├── pages/
+│   ├── Home.jsx        # Homepage
+│   └── ServicesPage.jsx # Services listing
+├── App.jsx             # Main app with routing
+└── App.css             # Global styles and CSS variables
+```
+
+## Features
+
+- Responsive design
+- Dark/light theme toggle (persisted to localStorage)
+- Tokyo Night color scheme
+- Custom cube logo
+
+## Contact
+
+- **Email:** halderm@arkadia-labs.io
+- **Phone:** +41 41 768 11 61
+- **Address:** Blegistrasse 11B, 6341 Baar, Switzerland
