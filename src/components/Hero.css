@@ -1,0 +1,45 @@
+.hero {
+  padding: 2rem 2rem 1.5rem;
+  text-align: center;
+}
+
+.hero-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.hero-logo svg {
+  width: 64px;
+  height: 64px;
+  filter: drop-shadow(0 4px 16px rgba(124, 58, 237, 0.4));
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 0.5rem;
+}
+
+.hero-tagline {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+}
