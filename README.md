@@ -89,15 +89,14 @@ The site automatically deploys to AWS S3 + CloudFront on push to `main` after CI
 
 ### CI/CD Pipeline
 
-1. **CI** (`.github/workflows/ci.yml`) - Runs on PRs and pushes to `main`:
-   - Linting (ESLint)
-   - Playwright tests (Chromium, Firefox, WebKit in parallel)
-   - Build verification
+Single workflow (`.github/workflows/ci.yml`) handles everything:
 
-2. **Deploy** (`.github/workflows/deploy.yml`) - Runs on push to `main`:
-   - Requires lint and all tests to pass
-   - Builds and deploys to S3
-   - Invalidates CloudFront cache
+| Trigger | Jobs |
+|---------|------|
+| Pull Request | lint, test (3 browsers), build |
+| Push to main | lint, test (3 browsers), build, deploy |
+
+The deploy job only runs on `main` after all checks pass.
 
 ### Required GitHub Secrets
 
