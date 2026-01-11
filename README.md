@@ -9,6 +9,7 @@ Corporate website for Arkadia Labs GmbH - a cloud consulting and DevOps company 
 - **Styling:** Tailwind CSS 4 with CSS-based configuration
 - **Components:** shadcn/ui (Button, Card)
 - **Icons:** Lucide React
+- **Testing:** Playwright (Chromium, Firefox, WebKit)
 - **Theme:** Custom Swiss-precision design with electric blue/purple accents (dark/light mode)
 - **Typography:** Syne (display) + Outfit (body) + JetBrains Mono (code)
 
@@ -29,6 +30,15 @@ npm run preview
 
 # Lint code
 npm run lint
+
+# Run tests
+npm test
+
+# Run tests with UI
+npm run test:ui
+
+# Run tests in headed mode
+npm run test:headed
 ```
 
 ## Project Structure
@@ -54,6 +64,11 @@ src/
 │   └── PrivacyPage.jsx    # Privacy policy (Swiss FADP compliant)
 ├── App.jsx                # Main app with routing
 └── index.css              # Tailwind config and custom utilities
+
+tests/
+├── navigation.spec.js     # Link and navigation tests (22 tests)
+├── content.spec.js        # Page content verification (44 tests)
+└── theme.spec.js          # Light/dark mode tests (18 tests)
 ```
 
 ## Features
@@ -66,10 +81,23 @@ src/
 - Custom animations (fade-up, float, shimmer)
 - shadcn/ui component primitives
 - Swiss legal compliance (Impressum, Privacy Policy)
+- Comprehensive Playwright test suite (84 tests across 3 browsers)
 
 ## Deployment
 
-The site automatically deploys to AWS S3 + CloudFront on push to `main`.
+The site automatically deploys to AWS S3 + CloudFront on push to `main` after CI passes.
+
+### CI/CD Pipeline
+
+1. **CI** (`.github/workflows/ci.yml`) - Runs on PRs and pushes to `main`:
+   - Linting (ESLint)
+   - Playwright tests (Chromium, Firefox, WebKit in parallel)
+   - Build verification
+
+2. **Deploy** (`.github/workflows/deploy.yml`) - Runs on push to `main`:
+   - Requires lint and all tests to pass
+   - Builds and deploys to S3
+   - Invalidates CloudFront cache
 
 ### Required GitHub Secrets
 
