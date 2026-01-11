@@ -235,9 +235,9 @@ test.describe('Page Content', () => {
       await expect(page.getByText('Right to Withdraw Consent')).toBeVisible()
     })
 
-    test('displays cookie information', async ({ page }) => {
-      await expect(page.getByText(/essential cookies/)).toBeVisible()
-      await expect(page.getByText(/theme preference/)).toBeVisible()
+    test('displays local storage information', async ({ page }) => {
+      await expect(page.getByText(/does not use cookies/)).toBeVisible()
+      await expect(page.getByText(/browser local storage/)).toBeVisible()
     })
 
     test('displays FDPIC reference', async ({ page }) => {
