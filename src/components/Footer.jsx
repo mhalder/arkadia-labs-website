@@ -66,6 +66,24 @@ function Footer() {
                   <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/impressum"
+                  className="text-sm text-foreground/80 hover:text-primary transition-colors inline-flex items-center gap-1 group"
+                >
+                  Impressum
+                  <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/privacy"
+                  className="text-sm text-foreground/80 hover:text-primary transition-colors inline-flex items-center gap-1 group"
+                >
+                  Privacy Policy
+                  <ArrowUpRight className="w-3 h-3 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
+                </Link>
+              </li>
             </ul>
           </div>
 

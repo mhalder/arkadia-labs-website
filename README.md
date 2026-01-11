@@ -49,7 +49,9 @@ src/
 │   └── utils.js           # Tailwind merge utility (cn function)
 ├── pages/
 │   ├── Home.jsx           # Homepage with hero, services, CTA
-│   └── ServicesPage.jsx   # Full services listing with process section
+│   ├── ServicesPage.jsx   # Full services listing with process section
+│   ├── ImpressumPage.jsx  # Legal notice (Swiss UCA compliant)
+│   └── PrivacyPage.jsx    # Privacy policy (Swiss FADP compliant)
 ├── App.jsx                # Main app with routing
 └── index.css              # Tailwind config and custom utilities
 ```
@@ -63,6 +65,7 @@ src/
 - Card hover effects with gradient borders
 - Custom animations (fade-up, float, shimmer)
 - shadcn/ui component primitives
+- Swiss legal compliance (Impressum, Privacy Policy)
 
 ## Deployment
 
