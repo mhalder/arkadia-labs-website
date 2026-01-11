@@ -66,8 +66,8 @@ src/
 └── index.css              # Tailwind config and custom utilities
 
 tests/
-├── navigation.spec.js     # Link and navigation tests (22 tests)
-├── content.spec.js        # Page content verification (44 tests)
+├── navigation.spec.js     # Link and navigation tests (21 tests)
+├── content.spec.js        # Page content verification (45 tests)
 └── theme.spec.js          # Light/dark mode tests (18 tests)
 ```
 

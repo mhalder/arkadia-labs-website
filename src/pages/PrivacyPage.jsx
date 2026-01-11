@@ -48,10 +48,10 @@ function PrivacyPage() {
                 including your name, email address, phone number, and the content of your message.
               </p>
               <p>
-                <span className="text-foreground font-medium">Technical Data:</span>{' '}
-                When you visit our website, our servers automatically collect certain technical information,
-                including your IP address, browser type, operating system, and pages visited. This data is
-                used for security purposes and to improve our website.
+                <span className="text-foreground font-medium">Website Usage:</span>{' '}
+                Our website does not collect or store any technical data about your visits. We do not
+                use server-side logging or analytics. Your theme preference is stored locally in your
+                browser and is never transmitted to us.
               </p>
             </div>
           </section>
@@ -63,8 +63,6 @@ function PrivacyPage() {
             <ul className="list-disc list-inside space-y-2 text-muted-foreground">
               <li>To respond to your inquiries and provide customer support</li>
               <li>To provide our cloud consulting and DevOps services</li>
-              <li>To improve and optimize our website</li>
-              <li>To ensure the security of our systems</li>
               <li>To comply with legal obligations</li>
             </ul>
           </section>
@@ -133,16 +131,16 @@ function PrivacyPage() {
             </p>
           </section>
 
-          {/* Cookies */}
+          {/* Cookies & Local Storage */}
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-foreground">8. Cookies</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">8. Cookies & Local Storage</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Our website uses only essential cookies necessary for the basic functionality of the site,
-              such as remembering your theme preference (dark/light mode). These cookies do not track
-              you across websites and do not collect personal information.
+              Our website does not use cookies. We use browser local storage solely to remember your
+              theme preference (dark/light mode). Local storage data remains on your device and is
+              never transmitted to our servers.
             </p>
             <p className="text-muted-foreground mt-4">
-              We do not use analytics cookies, advertising cookies, or any third-party tracking technologies.
+              We do not use analytics, advertising, or any third-party tracking technologies.
             </p>
           </section>
 
