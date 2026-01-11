@@ -4,10 +4,13 @@ Corporate website for Arkadia Labs GmbH - a cloud consulting and DevOps company 
 
 ## Tech Stack
 
-- **Framework:** React 19 + Vite
+- **Framework:** React 19 + Vite 7
 - **Routing:** React Router DOM
-- **Styling:** CSS with CSS Variables
-- **Theme:** Tokyo Night color scheme (dark/light mode)
+- **Styling:** Tailwind CSS 4 with CSS-based configuration
+- **Components:** shadcn/ui (Button, Card)
+- **Icons:** Lucide React
+- **Theme:** Custom Swiss-precision design with electric blue/purple accents (dark/light mode)
+- **Typography:** Syne (display) + Outfit (body) + JetBrains Mono (code)
 
 ## Getting Started
 
@@ -23,6 +26,9 @@ npm run build
 
 # Preview production build
 npm run preview
+
+# Lint code
+npm run lint
 ```
 
 ## Project Structure
@@ -30,25 +36,33 @@ npm run preview
 ```
 src/
 ├── components/
-│   ├── Header.jsx      # Navigation with logo and theme toggle
-│   ├── Footer.jsx      # Contact info and address
-│   ├── Hero.jsx        # Homepage hero section
-│   └── ServiceCard.jsx # Reusable service card component
+│   ├── ui/
+│   │   ├── button.jsx     # shadcn Button component
+│   │   └── card.jsx       # shadcn Card component
+│   ├── Header.jsx         # Glass navigation with theme toggle
+│   ├── Footer.jsx         # Contact info and address
+│   ├── Hero.jsx           # Animated hero with geometric elements
+│   └── ServiceCard.jsx    # Service card with icons and features
 ├── context/
-│   └── ThemeContext.jsx # Dark/light theme state
+│   └── ThemeContext.jsx   # Dark/light theme state (localStorage)
+├── lib/
+│   └── utils.js           # Tailwind merge utility (cn function)
 ├── pages/
-│   ├── Home.jsx        # Homepage
-│   └── ServicesPage.jsx # Services listing
-├── App.jsx             # Main app with routing
-└── App.css             # Global styles and CSS variables
+│   ├── Home.jsx           # Homepage with hero, services, CTA
+│   └── ServicesPage.jsx   # Full services listing with process section
+├── App.jsx                # Main app with routing
+└── index.css              # Tailwind config and custom utilities
 ```
 
 ## Features
 
-- Responsive design
+- Responsive design (mobile-first)
 - Dark/light theme toggle (persisted to localStorage)
-- Tokyo Night color scheme
-- Custom cube logo
+- Glass morphism navigation header
+- Animated gradient text and geometric backgrounds
+- Card hover effects with gradient borders
+- Custom animations (fade-up, float, shimmer)
+- shadcn/ui component primitives
 
 ## Deployment
 

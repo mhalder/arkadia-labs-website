@@ -10,6 +10,13 @@ export function ThemeProvider({ children }) {
 
   useEffect(() => {
     localStorage.setItem('theme', isDark ? 'dark' : 'light')
+    // Update class for Tailwind dark mode
+    if (isDark) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+    // Keep data-theme for backwards compatibility
     document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light')
   }, [isDark])
 
