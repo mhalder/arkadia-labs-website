@@ -108,7 +108,7 @@ function ImpressumPage() {
 
         {/* Last Updated */}
         <p className="mt-12 text-sm text-muted-foreground">
-          Last updated: January 2026
+          Last updated: March 2026
         </p>
       </div>
     </div>

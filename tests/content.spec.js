@@ -27,8 +27,8 @@ test.describe('Page Content', () => {
       await expect(page.getByText('Core Services')).toBeVisible()
       await expect(page.getByText('Swiss', { exact: true })).toBeVisible()
       await expect(page.getByText('Precision', { exact: true })).toBeVisible()
-      await expect(page.getByText('24/7')).toBeVisible()
-      await expect(page.getByText('Support', { exact: true })).toBeVisible()
+      await expect(page.getByText('100%')).toBeVisible()
+      await expect(page.getByText('Cloud Native', { exact: true })).toBeVisible()
     })
 
     test('displays Core Expertise section', async ({ page }) => {
@@ -194,7 +194,7 @@ test.describe('Page Content', () => {
     })
 
     test('displays last updated date', async ({ page }) => {
-      await expect(page.getByText(/Last updated: January 2026/)).toBeVisible()
+      await expect(page.getByText(/Last updated: March 2026/)).toBeVisible()
     })
   })
 
@@ -245,7 +245,7 @@ test.describe('Page Content', () => {
     })
 
     test('displays last updated date', async ({ page }) => {
-      await expect(page.getByText(/Last updated: January 2026/)).toBeVisible()
+      await expect(page.getByText(/Last updated: March 2026/)).toBeVisible()
     })
   })
 

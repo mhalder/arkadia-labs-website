@@ -100,8 +100,8 @@ function Hero() {
             <div className="text-sm text-muted-foreground mt-1">Precision</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold font-display text-primary">24/7</div>
-            <div className="text-sm text-muted-foreground mt-1">Support</div>
+            <div className="text-3xl font-bold font-display text-primary">100%</div>
+            <div className="text-sm text-muted-foreground mt-1">Cloud Native</div>
           </div>
         </div>
       </div>
